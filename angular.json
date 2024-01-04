@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "new": {
+    "angular_password-checker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
