@@ -2,19 +2,8 @@
   <h1 class="app__title">Check your password</h1>
 
   <div class="password-checker">
-    <div class="password">
-      <input 
-        class="password__input"
-        [type]="visible ? 'text' : 'password'"
-        placeholder="Enter your password"
-        (keyup)="updatePassword($event)"
-      />
-  
-      <span class="password__input__hide" (click)="changePassVisibility()">
-        <fa-icon [icon]="visible ? faEye : faEyeSlash"></fa-icon>
-      </span>
-    </div>
-  
+    <app-password-input (passwordChanged)="updatePassword($event)"></app-password-input>
+
     <div class="validation">
       <div class="validation__bar" [ngClass]="getValidationBarClass()">
         <span class="validation__bar__section"></span>
@@ -26,7 +15,8 @@
 
   <div class="password-rules">
     <ul class="rules-list">
-      <li class="rules-list__item">Password must be at least 8 charactes</li>
+      <li class="rules-list__item">Password must be at least 8 characters</li>
+      <li class="rules-list__item">Spaces are not allowed</li>
       <li class="rules-list__item">Password must contain at least 1 letter</li>
       <li class="rules-list__item">Password must contain at least 1 number</li>
       <li class="rules-list__item">Password must contain at least 1 special character</li>

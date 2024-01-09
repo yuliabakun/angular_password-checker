@@ -1,8 +1,4 @@
-@mixin onDesktop() {
-    @media (min-width: 1024px) {
-      @content;
-    }
-}
+@import '../styles.scss';
 
 .app {
     margin: 25px 15px;
@@ -49,32 +45,6 @@
 .rules-list {
     &__item {
         font-family: 'Courier New', Courier, monospace;
-    }
-}
-
-.password {
-    position: relative;
-    margin-bottom: 10px;
-
-    &__input {
-        border: 1px solid #ddd;
-        height: 40px;
-        padding: 0 15px;
-        border-radius: 5px;
-        font-size: 15px;
-        width: 300px;
-        font-family: 'Courier New', Courier, monospace;
-
-        ::placeholder {
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        &__hide {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            cursor: pointer;
-        }
     }
 }
 
